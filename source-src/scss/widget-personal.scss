@@ -1,0 +1,35 @@
+#personal_info {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    img {
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+    }
+    i {
+        width: 20px;
+        height: 20px;
+    }
+    .arrow-show {
+        content: url('../img/arrow.png');
+        transform: rotate(90deg);
+        cursor: pointer;
+    }
+    .icon-github {
+        content: url('../img/git.png');
+    }
+    .icon-juejin {
+        content: url('../img/juejin.png');
+    }
+    .icon-jianshu {
+        content: url('../img/jianshu.png');
+    }
+    .icon-csdn {
+        content: url('../img/csdn.png');
+    }
+    .icon-cnblog {
+        content: url('../img/cnblogs.png');
+    }
+
+}

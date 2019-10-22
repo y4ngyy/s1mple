@@ -1,0 +1,107 @@
+// @import "navbar.scss";
+
+$backgroundColor: white;
+$large: 1024px;
+$medium: 768px;
+$small: 480px;
+$largeWidth: 960px;
+$windowsFont : "Microsoft YaHei","微软雅黑","FangSong","仿宋",;
+$macFont: "Hiragino Sans GB", "冬青黑体","STFangsong", "华文仿宋",;
+$footerHeight: 50px;
+
+
+
+//@font-face {
+//    font-family: "Monaco";
+//    src: url("../font/Monaco.ttf");
+//}
+
+* {
+    font-family: "Lucida Console",Monaco, $windowsFont, $macFont, sans-serif;
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background: $backgroundColor;
+    position: relative;
+    word-spacing: .2em;
+    line-height: 1.8em;
+    font-weight: normal;
+    font-style: normal;
+    background: #eee;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#container {
+    margin: 0 auto;
+    width: $largeWidth;
+    min-height: 100%;
+    position: relative;
+    background: white;
+    #wrap {
+      padding-bottom: $footerHeight;
+    }
+}
+
+#navbar {
+    background: white;
+    position: relative;
+    width: 100%;
+    // background: $backgroundColor;
+    text-align: right;
+    ul {
+        // line-height: 50px;
+        padding:10px;
+        max-width: $largeWidth;
+        margin: 0 auto;
+    }
+    li {
+        font-size: 20px;
+        margin: 0 10px;
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+    }
+
+    li::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        border-bottom: 2px solid #000;
+    }
+
+    li:hover::before {
+        width: 100%;
+        transition: width 0.5s;
+    }
+}
+
+.arrow {
+  content: url("../img/arrow.png");
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+@import "github-gist.css";
+@import "archive.scss";
+@import "footer.scss";
+@import "banner.scss";
+@import "widget-personal.scss";
+@import "article.scss";

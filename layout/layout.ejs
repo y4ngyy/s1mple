@@ -1,0 +1,18 @@
+<%- partial('_partial/head') %>
+<body>
+  <%- partial('_partial/_widget/personal_info') %>
+  <% if(page.path == "index.html") { %>
+  <%- partial('_partial/index') %>
+  <% } %>
+  <%- partial('_partial/navbar') %>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <section id="main"><%- body %></section>
+      </div>
+    </div>
+    <%- partial('_partial/footer') %>
+  </div>
+
+</body>
+</html>

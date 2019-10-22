@@ -1,0 +1,38 @@
+article {
+  padding: 20px;
+  font-size: 16px;
+  margin: 20px;
+  position: relative;
+  code {
+    background: #f1f2f6!important;
+    padding: 2px;
+    border: 1px solid #dfe4ea;
+    border-radius: 3px;
+    ol {
+      list-style-type: none;
+    }
+    p {
+      margin-top: 1em;
+      line-height: 180%;
+    }
+  }
+  p,ul {
+    word-spacing: .2em;
+    letter-spacing: .1em;
+  }
+  .article-meta {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    div {
+      display: inline-block;
+    }
+  }
+  blockquote {
+    p {
+      padding: 20px;
+      background: #f1f2f6;
+      border-left: solid 5px #757575;
+    }
+  }
+}

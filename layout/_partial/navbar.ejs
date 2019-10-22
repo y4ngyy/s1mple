@@ -1,0 +1,7 @@
+<aside id="navbar">
+    <ul>
+        <% for(var i in theme.menu) {%>
+            <a href="<%- url_for(theme.menu[i]) %>"><li><%= i %></li></a>
+        <% } %>
+    </ul>
+</aside>

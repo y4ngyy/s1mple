@@ -1,0 +1,12 @@
+#page-nav {
+    text-align: center;
+    .page-number {
+        margin: 10px;
+        border: 1px solid;
+        padding: 5px;
+    }
+    .current {
+        background: black;
+        color: white;
+    }
+}
