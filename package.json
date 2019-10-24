@@ -4,7 +4,8 @@
   "description": "a hexo theme",
   "main": "index.js",
   "scripts": {
-    "test": "webpack --config webpack.config.js"
+    "test": "webpack --config webpack.config.js",
+    "watch": "webpack --watch --config webpack.config.js"
   },
   "author": "",
   "license": "ISC",

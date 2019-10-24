@@ -1,20 +1,14 @@
 // @import "navbar.scss";
 
-$backgroundColor: white;
+$backgroundColor: #eee;
 $large: 1024px;
 $medium: 768px;
 $small: 480px;
 $largeWidth: 960px;
 $windowsFont : "Microsoft YaHei","微软雅黑","FangSong","仿宋",;
 $macFont: "Hiragino Sans GB", "冬青黑体","STFangsong", "华文仿宋",;
-$footerHeight: 50px;
+$footerHeight: 30px;
 
-
-
-//@font-face {
-//    font-family: "Monaco";
-//    src: url("../font/Monaco.ttf");
-//}
 
 * {
     font-family: "Lucida Console",Monaco, $windowsFont, $macFont, sans-serif;
@@ -23,18 +17,19 @@ $footerHeight: 50px;
 body,html {
     margin: 0;
     padding: 0;
-    height: 100%;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     background: $backgroundColor;
     position: relative;
+    min-height: 100vh;
     word-spacing: .2em;
     line-height: 1.8em;
     font-weight: normal;
     font-style: normal;
-    background: #eee;
-
+    //background: #eee;
 }
 
 a {
@@ -43,22 +38,29 @@ a {
 }
 
 #container {
+    flex:1;
+    padding: 8px 0 0;
     margin: 0 auto;
     width: $largeWidth;
-    min-height: 100%;
     position: relative;
-    background: white;
-    #wrap {
-      padding-bottom: $footerHeight;
+    #main {
+        width: 75%;
+        float: right;
     }
+    box-sizing: border-box;
+}
+#container::after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
 #navbar {
     background: white;
     position: relative;
     width: 100%;
-    // background: $backgroundColor;
     text-align: right;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.05);
     ul {
         // line-height: 50px;
         padding:10px;
@@ -66,7 +68,7 @@ a {
         margin: 0 auto;
     }
     li {
-        font-size: 20px;
+        //font-size: 20px;
         margin: 0 10px;
         text-decoration: none;
         display: inline-block;
@@ -102,6 +104,6 @@ a {
 @import "github-gist.css";
 @import "archive.scss";
 @import "footer.scss";
-@import "banner.scss";
+@import "aside.scss";
 @import "widget-personal.scss";
 @import "article.scss";

@@ -1,14 +1,12 @@
 menu:
   Home: /
   Archives: /archives
-  Categories: /category
 
-avatar: 'https://y4ngyy.xyz/assets/avatar.jpg'
-favicon: 'https://y4ngyy.xyz/assets/favicon.ico'
-banner: './img/banner.jpg'
+avatar: '/assets/avatar.jpg'
+favicon: '/assets/favicon.ico'
 
 github: "https://github.com/y4ngyy"
 jianshu: "https://www.jianshu.com/u/bfe22c1bc5e0"
-juejin: "acbd"
-cnblog: "aa"
-csdn: "aa"
+juejin: ""
+cnblog: ""
+csdn: ""

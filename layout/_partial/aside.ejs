@@ -1,0 +1,13 @@
+<aside>
+    <div class="author">
+        <div class="avatar"><img src="<%= theme.avatar %>" alt="avatar"></div>
+        <div class="name"><%- config.author%></div>
+        <div class="description"><%- config.description%></div>
+    </div>
+    <div id="category">
+        <div class="aside-header">
+            <div>目录</div>
+        </div>
+        <%- list_categories(site.categories,{show_count:true}) %>
+    </div>
+</aside>
