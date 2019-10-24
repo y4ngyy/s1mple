@@ -6,8 +6,16 @@
     </div>
     <div id="category">
         <div class="aside-header">
-            <div>目录</div>
+            <div>分类</div>
         </div>
         <%- list_categories(site.categories,{show_count:true}) %>
     </div>
+    <% if (is_post()) { %>
+        <div id="toc-div">
+            <div class="aside-header">
+                <div>目录</div>
+            </div>
+            <%- toc(page.content) %>
+        </div>
+    <% } %>
 </aside>

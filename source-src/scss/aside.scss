@@ -1,5 +1,4 @@
 aside {
-
     float: left;
     width: 24%;
     .author {
@@ -51,6 +50,20 @@ aside {
                 content: "]";
             }
 
+        }
+    }
+    #toc-div {
+        box-shadow: initial;
+        .toc {
+            background: white;
+            margin:0;
+            padding: 10px;
+            li {
+                list-style: none;
+            }
+            a:hover {
+                color: #757575;
+            }
         }
     }
 }

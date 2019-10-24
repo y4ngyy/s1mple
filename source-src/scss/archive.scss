@@ -1,5 +1,8 @@
 #page-nav {
     text-align: center;
+    background: white;
+    padding-bottom: 20px;
+    margin-top: -20px;
     .page-number {
         margin: 10px;
         border: 1px solid;
@@ -12,10 +15,18 @@
 }
 
 .archives-wrap {
+    background: white;
+    padding: 30px;
     h1 {
         font-size: 20px;
     }
     article {
         margin: 0;
+    }
+    margin-bottom: 20px;
+    .archive-article {
+        .article-meta {
+            float: right;
+        }
     }
 }

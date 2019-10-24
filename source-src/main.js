@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import hljs from 'highlight.js'
+import hljs from 'highlight.js';
 import './scss/main.scss';
 
 hljs.initHighlightingOnLoad();
@@ -14,20 +14,40 @@ $(function () {
     $("pre code").each(function(){
         $(this).html("<ol><li>" + $(this).html().replace(/\n/g,"\n</li><li>") +"\n</li></ol>");
       });
-
+    // 全局变量
+    var global = {};
     $(window).scroll(function() {
       let top = document.scrollingElement.scrollTop;
-      let navTop = $('#navbar').position().top;
+      let navTop = $("#navbar").offset().top;
+      let toc = $('#toc-div');
+      if (toc.length > 0) {
+        if (global['tocTop'] === undefined) {
+          global['tocTop'] = toc.offset().top;
+          console.log(global);
+        }
+        if (top > global.tocTop) {
+          toc.css({
+            'position':'fixed',
+            'top': '10px',
+            'width': toc.width()
+          });
+        } else {
+          toc.css('position','static');
+        }
+      }
+
       if (top > navTop) {
-        if ($('.arrow').length<=0) {
+        let arrow = $('.arrow');
+        if (arrow.length<=0) {
           let i = $('<i class="arrow"></i>');
           i.click(scrollToTop);
           $('#container').after(i);
         }
-        $('.arrow').show();
+        arrow.show();
       } else {
-        if ($('.arrow').length > 0) {
-          $('.arrow').hide();
+        let arrow = $('.arrow');
+        if (arrow.length > 0) {
+          arrow.hide();
         }
       }
     });

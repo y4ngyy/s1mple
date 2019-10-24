@@ -10,8 +10,9 @@
         <% if (last != null){ %>
           </div></section>
         <% } %>
-        <% last = year; %>  
+        <% last = year; %>
         <section class="archives-wrap">
+          <div><%= last %></div>
           <div class="archives">
       <% } %>
       <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
@@ -29,4 +30,3 @@
       }) %>
     </nav>
   <% } %>
-  
