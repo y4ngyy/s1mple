@@ -1,6 +1,23 @@
 aside {
     float: left;
     width: 24%;
+    ul {
+      margin: 0;
+      padding: 10px;
+
+      li {
+        margin: 0 10px;
+        list-style: none;
+        position: relative;
+
+        a {
+          color: inherit;
+        }
+      }
+      li:hover {
+        color: #757575;
+      }
+    }
     .author {
         padding: 10px;
         background: white;
@@ -26,30 +43,14 @@ aside {
         background: white;
         font-size: 16px;
         margin: 10px 0;
-        ul {
-            margin: 0;
-            padding: 10px;
-            li {
-                margin: 0 10px;
-                list-style: none;
-                position: relative;
-                a {
-                    color: inherit;
-                }
-            }
-            li:hover {
-                color: #757575;
-            }
-            .category-list-count {
-                float: right;
-            }
-            .category-list-count::before {
-                content: "[";
-            }
-            .category-list-count::after {
-                content: "]";
-            }
-
+        .category-list-count {
+            float: right;
+        }
+        .category-list-count::before {
+            content: "[";
+        }
+        .category-list-count::after {
+          content: "]";
         }
     }
     #toc-div {
@@ -66,4 +67,8 @@ aside {
             }
         }
     }
+  .friend-box {
+    background: white;
+    margin-bottom: 10px;
+  }
 }

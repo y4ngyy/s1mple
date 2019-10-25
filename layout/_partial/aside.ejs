@@ -10,6 +10,21 @@
         </div>
         <%- list_categories(site.categories,{show_count:true}) %>
     </div>
+    <% if(Object.keys(theme.friends).length > 0) { %>
+    <div id="friends">
+        <div class="aside-header">
+            <div>友情链接</div>
+        </div>
+        <div class="friend-box">
+            <ul>
+                <% for(var name in Object.keys(theme.friends)) { %>
+                    <% var key = Object.keys(theme.friends)[name] %>
+                    <li><a href="<%= theme.friends[key] %>"><%= key %></a></li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+    <% } %>
     <% if (is_post()) { %>
         <div id="toc-div">
             <div class="aside-header">
