@@ -1,0 +1,44 @@
+#navbar {
+  background: white;
+  position: relative;
+  width: 100%;
+  text-align: right;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.05);
+  .nav-label {
+    position: absolute;
+    top: 9px;
+    left: 20px;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  ul {
+    // line-height: 50px;
+    padding:10px;
+    max-width: $largeWidth;
+    margin: 0 auto;
+  }
+  li {
+    //font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+  }
+
+  li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-bottom: 2px solid #000;
+  }
+
+  li:hover::before {
+    width: 100%;
+    transition: width 0.5s;
+  }
+}

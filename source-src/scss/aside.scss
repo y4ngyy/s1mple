@@ -1,4 +1,7 @@
 aside {
+    @media screen and (max-width: $medium) {
+      display: none;
+    }
     float: left;
     width: 24%;
     ul {

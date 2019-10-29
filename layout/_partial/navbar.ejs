@@ -1,4 +1,7 @@
 <div id="navbar">
+    <div class="nav-label">
+        <img src="<%= theme.label %>" alt="label">
+    </div>
     <ul>
         <% for(var i in theme.menu) {%>
             <a href="<%- url_for(theme.menu[i]) %>"><li><%= i %></li></a>
