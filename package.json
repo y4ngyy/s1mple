@@ -29,6 +29,6 @@
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
     "highlight.js": "^9.15.10",
-    "jquery": "^3.4.1"
+    "jquery": "^3.5.0"
   }
 }
